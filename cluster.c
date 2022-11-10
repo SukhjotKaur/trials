@@ -30,17 +30,18 @@ int small(int a, int b, int c, int d)
 }
 int main()
 {
-    int n, a, b, c, d, o, i, j, g1, g2, g3, g4;
+    int n, a, b, c, d, o, i, j, g1, g2, g3, g4,lower,upper;
     printf("Enter the seed values: ");
     scanf("%d%d%d%d", &a, &b, &c, &d);
     printf("Enter the no of elemnts in the array: ");
     scanf("%d", &n);
-    // int *s1=(int*)malloc(n*sizeof(int)),*s2=(int*)malloc(n*sizeof(int)),*s3=(int*)malloc(n*sizeof(int)),*s4=(int*)malloc(n*sizeof(int));
+    printf("Enter the upper and lower limit of the range: ");
+    scanf("%d%d", &lower,&upper);
     g1 = a, g2 = b, g3 = c = c, g4 = d;
     int arr[n];
     for (i = 0; i < n; i++)
     {
-        arr[i] = rand() % n;
+        arr[i] = (rand() % (upper - lower + 1)) + lower;
     }
     for (j = 0; j < n / 2; j++)
     {
