@@ -50,44 +50,40 @@ int main()
         {
             s1[o] = 0;
             s2[o] = 0;
-            s3[i] = 0;
-            s4[i] = 0;
+            s3[o] = 0;
+            s4[o] = 0;
         }
         s1[0] = g1, s2[0] = g2, s3[0] = g3, s4[0] = g4;
         for (i = 0; i < n; i++)
         {
-            int A, B, C, D, m, k, l;
+            int A, B, C, D, m, k, l=n;
             A = abs(a - arr[i]), B = abs(b - arr[i]), C = abs(c - arr[i]), D = abs(d - arr[i]);
             m = small(A, B, C, D);
             if (m == A)
             {
-                // s1[i+1]=(int*)malloc(1*sizeof(int));
                 s1[i + 1] = arr[i];
-                l = sizeof(s1) / sizeof(s1[0]);
+                // l = sizeof(s1) / sizeof(s1[0]);
                 k = mean(s1, l);
                 s1[0] = k;
             }
             else if (m == B)
             {
-                // s2[i+1]=(int*)malloc(1*sizeof(int));
                 s2[i + 1] = arr[i];
-                l = sizeof(s2) / sizeof(s2[0]);
+                // l = sizeof(s2) / sizeof(s2[0]);
                 k = mean(s2, l);
                 s2[0] = k;
             }
             else if (m == C)
             {
-                // s3[i+1]=(int*)malloc(1*sizeof(int));
                 s3[i + 1] = arr[i];
-                l = sizeof(s3) / sizeof(s3[0]);
+                // l = sizeof(s3) / sizeof(s3[0]);
                 k = mean(s3, l);
                 s3[0] = k;
             }
             else if (m == D)
             {
-                // s4[i+1]=(int*)malloc(1*sizeof(int));
                 s4[i + 1] = arr[i];
-                l = sizeof(s4) / sizeof(s4[0]);
+                // l = sizeof(s4) / sizeof(s4[0]);
                 k = mean(s4, l);
                 s4[0] = k;
             }
